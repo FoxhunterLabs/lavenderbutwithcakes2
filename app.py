@@ -10,4 +10,6 @@ def health():
 
 if __name__ == "__main__":
     init_db()
+    from connectors.registry import ensure_default_connectors
+    ensure_default_connectors()
     app.run(debug=True)
