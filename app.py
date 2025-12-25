@@ -3,9 +3,11 @@ from config import APP_NAME
 from db import init_db
 from connectors.registry import ensure_default_connectors
 from api.routes import api
+from ui.routes import ui
 
 app = Flask(__name__)
 app.register_blueprint(api, url_prefix="/api")
+app.register_blueprint(ui, url_prefix="/ui")
 
 
 @app.route("/health")
