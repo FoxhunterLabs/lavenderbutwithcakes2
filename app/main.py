@@ -1,7 +1,7 @@
 import os
 from flask import Flask, jsonify
 
-APP_NAME = "LavenderButWithCakes2"
+from app.core.config import APP_NAME
 
 def create_app() -> Flask:
     app = Flask(__name__)
